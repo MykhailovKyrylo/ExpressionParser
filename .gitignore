@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+### IDE/editors configs and projects:
+*.sublime-*
+.idea/
+.vscode/
+.vs/
+venv/
+
+cmake-build-*/
+
+# Mac stuff
+*.DS_Store
