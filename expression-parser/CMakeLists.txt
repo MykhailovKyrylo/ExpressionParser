@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.17)
+project(expression_parser)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_library(expression_parser_lib src/ExpressionParser.cpp)
+target_include_directories(expression_parser_lib PUBLIC include)
+
+add_executable(expression_parser main.cpp)
+target_link_libraries(expression_parser PUBLIC expression_parser_lib)
+
+add_executable(expression_parser_tests tests/expression_parser_tests.cpp)
+target_link_libraries(expression_parser_tests PRIVATE expression_parser_lib)
