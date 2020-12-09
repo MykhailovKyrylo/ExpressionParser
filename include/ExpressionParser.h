@@ -11,18 +11,18 @@
 class ExpressionParser {
   protected:
     enum class MathOperator {
-        Addition,
-        Subtraction,
-        Multiplication,
-        Division,
-        Power
+        Addition,       // +
+        Subtraction,    // -
+        Multiplication, // *
+        Division,       // /
+        Power           // ^
     };
 
     enum class MathFunction {
-        Sinus,
-        Cosinus,
-        Tangens,
-        Exsponent
+        Sinus,          // sin(
+        Cosinus,        // cos(
+        Tangens,        // tg(
+        Exsponent       // exp(
     };
 
     enum class MathConstant {

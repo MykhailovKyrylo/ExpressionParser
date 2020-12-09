@@ -75,7 +75,8 @@ std::vector<ExpressionParser::Token> ExpressionParser::parse(const std::vector<T
                 while (!stack.empty() &&
                         ((IsCloseParenthesis(token) && !isFunction(stack.top()) && !IsOpenParenthesis(stack.top())) ||
                         (getPriority(stack.top()) > getPriority(token)) ||
-                        (getPriority(stack.top()) == getPriority(token) && getAssociativity(token) == Operators::Associates::Left))) {
+                        (getPriority(stack.top()) == getPriority(token) &&
+                         getAssociativity(token) == Operators::Associates::Left))) {
                     output.push_back(stack.top());
                     stack.pop();
                 }

@@ -16,7 +16,7 @@ void DrawPlotWithPython(const std::pair<std::vector<double>, std::vector<double>
         return result;
     };
 
-    const std::string call_python = "python3 ../plotting.py";
+    const std::string call_python = "python ../plotting.py";
     const std::string syscall = call_python + ' ' + make_list(x_y_out.first) + ' ' + make_list(x_y_out.second);
 
     std::cout << syscall << std::endl;
